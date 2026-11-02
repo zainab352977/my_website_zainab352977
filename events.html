@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الفعاليات | كل الفعاليات</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <header class="bg-gradient-primary text-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent container py-1">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">دليل الفعاليات</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">كل الفعاليات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">تفاصيل الفعالية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <button class="btn btn-outline-light ms-3 rounded-pill" id="darkModeToggle">الوضع الداكن 🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h1 class="text-center fw-bold mb-5 section-title"> جميع الفعاليات</h1>
+
+        <!--البحث والتصنيف -->
+        <div class="card border-0 shadow-sm p-4 rounded-4 mb-5 filter-bar-container">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold text-muted">البحث بكلمة مفتاحية</label>
+                    <input type="text" id="searchInput" class="form-control rounded-pill px-3" placeholder="اكتب اسم الفعالية...">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold text-muted">التصنيف الرئيسي</label>
+                    <select id="categorySelect" class="form-select rounded-pill px-3">
+                        <option value="all">كل التصنيفات</option>
+                        <option value="ثقافة">ثقافة</option>
+                        <option value="رياضة">رياضة</option>
+                        <option value="موسيقى">موسيقى</option>
+                        <option value="تكنولوجي">تكنولوجي</option>
+                        <option value="توظيفي">توظيفي</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold text-muted">الترتيب الزمني</label>
+                    <select id="dateSortSelect" class="form-select rounded-pill px-3">
+                        <option value="all">الأحدث مضافاً</option>
+                        <option value="قريباً">الفعاليات القادمة هذا الشهر</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- الفعاليات -->
+        <div class="row g-4" id="eventsListGrid">
+            <!-- الأولى -->
+            <div class="col-md-6 col-lg-4 event-page-card" data-category="ثقافة" data-title="معرض الكتاب الجامعي">
+                <div class="card h-100 shadow-sm border-0 card-hover rounded-4 overflow-hidden">
+
+                     <img src="assets/img/معرض الكتاب.jpg" class="card-img-top" alt="معرض الكتاب الجامعي" style="height: 200px; object-fit: cover;">
+        
+                    <div class="card-body p-4">
+                        <span class="badge bg-secondary mb-2">ثقافة</span>
+                        <h5 class="card-title fw-bold">معرض الكتاب الجامعي</h5>
+                        <p class="small text-primary mb-2">📍 الموقع: بهو المكتبة المركزية بجامعة دمشق | 📅 التوقيت: 11 تشرين الثاني 2026</p>
+
+                        <p class="card-text text-muted">مساحة لاستكشاف الكتب والمراجع المتنوعة، وتشجيع القراءة وتبادل المعرفة بين الطلاب.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 p-4 pt-0">
+                        <a href="event.html#1" class="btn btn-primary w-100 rounded-pill fw-bold">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الثانية -->
+            <div class="col-md-6 col-lg-4 event-page-card" data-category="توظيفي" data-title="معرض فرص العمل">
+                <div class="card h-100 shadow border-gradient rounded-4 overflow-hidden position-relative">
+
+                     <img src="assets/img/معرض فرص العمل.jpg" class="card-img-top" alt="معرض  فرص العمل" style="height: 200px; object-fit: cover;">
+
+                    <div class="card-body p-4">
+                        <span class="badge bg-danger mb-2">توظيفي</span>
+                        <h5 class="card-title fw-bold">معرض فرص العمل </h5>
+                        <p class="small text-primary mb-2">📍 الموقع: قاعة المتنبي بفندق الداما روز بدمشق | 📅 التوقيت: 5 تموز 2026</p>
+                        <p class="card-text text-muted">فعالية للتواصل مع أصحاب العمل والتعرّف على فرص التدريب والمسارات المهنية ومتطلبات سوق العمل.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 p-4 pt-0">
+                        <a href="event.html#2" class="btn btn-danger w-100 rounded-pill fw-bold">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الثالثة -->
+            <div class="col-md-6 col-lg-4 event-page-card" data-category="رياضة" data-title="البطولة الرياضية الجامعية">
+                <div class="card h-100 shadow-sm border-0 card-hover rounded-4 overflow-hidden">
+                     <img src="assets/img/رياضة.jpg" class="card-img-top" alt="بطولة الرياضة" style="height: 200px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <span class="badge bg-success mb-2">رياضة</span>
+                        <h5 class="card-title fw-bold">البطولة الرياضية الجامعية</h5>
+                        <p class="small text-primary mb-2">📍 الموقع: الصالة الرياضية المغلقة بالمدينة الجامعية بالمزة | 📅 التوقيت: 15 تشرين الثاني 2026</p>
+                        <p class="card-text text-muted">منافسات رياضية بين الفرق الطلابية، تتيح للطلاب ممارسة الرياضة وتعزيز التعاون والروح الرياضية.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 p-4 pt-0">
+                        <a href="event.html#3" class="btn btn-primary w-100 rounded-pill fw-bold">التفاصيل</a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- الرابعة -->
+            <div class="col-md-6 col-lg-4 event-page-card" data-category="موسيقى" data-title="الأمسية الموسيقية ">
+                <div class="card h-100 shadow-sm border-0 card-hover rounded-4 overflow-hidden">
+                     <img src="assets/img/موسيقا.jpg" class="card-img-top" alt="الأمسية الموسيقية" style="height: 200px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <span class="badge bg-info text-dark mb-2">موسيقى</span>
+                        <h5 class="card-title fw-bold">الأمسية الموسيقية</h5>
+                        <p class="small text-primary mb-2">📍 الموقع: مسرح الدراما بدار الأوبرا بدمشق | 📅 التوقيت: 12 أيار 2026</p>
+                        <p class="card-text text-muted">أمسية فنية يقدم فيها الطلاب عروضًا موسيقية وغنائية، بهدف إبراز المواهب الفنية وتشجيع الإبداع.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 p-4 pt-0">
+                        <a href="event.html#4" class="btn btn-primary w-100 rounded-pill fw-bold">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الخامسة -->
+            <div class="col-md-6 col-lg-4 event-page-card" data-category="تكنولوجي" data-title="هاكاثون البرمجة والتكنولوجيا">
+                <div class="card h-100 shadow-sm border-0 card-hover rounded-4 overflow-hidden">
+                     <img src="assets/img/هاكاثون.jpg" class="card-img-top" alt="الهاكاثون البرمجي" style="height: 200px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <span class="badge bg-warning text-dark mb-2">تكنولوجي</span>
+                        <h5 class="card-title fw-bold">هاكاثون البرمجة والتكنولوجيا</h5>
+                        <p class="small text-primary mb-2">📍 الموقع: المعهد العالي للعلوم التطبيقية والتكنولوجيا ببرزة | 📅 التوقيت: 27 آب 2026</p>
+                        <p class="card-text text-muted">تحدٍّ تقني يعمل فيه الطلاب ضمن فرق لتطوير حلول برمجية مبتكرة لمشكلات واقعية خلال فترة زمنية محددة.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 p-4 pt-0">
+                        <a href="event.html#5" class="btn btn-primary w-100 rounded-pill fw-bold">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!--التذييل نفسه من الصفحة الثانية حتى الخامسة-->
+    <footer class="pt-5 pb-4 mt-auto border-top border-secondary" style="background-color: #34495e; color: #ffffff;">
+        <div class="container text-center text-md-start">
+            <p class="small  text-center mb-0"> جميع الحقوق محفوظة 2026   | دليل فعاليات الجامعة الافتراضية السورية</p>
+        </div>
+    </footer>
+
+<!--استدعاء مكتبة بوتستراب والربط مع جافا-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+        <a href="#" class="top-btn">العودة للأعلى</a>
+
+</body>
+</html>

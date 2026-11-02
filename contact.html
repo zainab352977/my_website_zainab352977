@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--   يعتمد بوتستراب بشكل كلي على الوسم السابق ليقوم بعملية التجاوب وتنسيق العناصر بناء على حجم الشاشة  -->
+
+    <title>دليل الفعاليات | اتصل بنا</title>
+
+            <!-- التالي ملف تنسيق بوتستراب يدعم اللغة التي تكتب من اليمين ألى اليسار مثل العربية -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+
+<body>
+    <!--  التالي كلاسات بوتستراب لتلوين الخلفية والنص وحجم الخط -->
+    <header class="bg-gradient-primary text-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent container py-1">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">دليل الفعاليات</a>
+
+            <!-- خصائص بوتستراب التفاعلية -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">كل الفعاليات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="event.html">تفاصيل الفعالية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">اتصل بنا</a></li>
+                </ul>
+                <!--زر الوضع الداكن أيضاً باستخدام كلاس بوتستراب -->
+                <button class="btn btn-outline-light ms-3 rounded-pill" id="darkModeToggle">الوضع الداكن 🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row g-5 flex-row-reverse">
+
+
+            
+            <div class="col-md-7">
+                <div class="card border-0 shadow-sm p-4 p-md-5 rounded-6">
+                    <h2 class="fw-bold mb-2 text-dark"> أرسل لنا استفسارك</h2>
+                    <p class="text-muted small mb-4">الرجاء ملء المعلومات أدناه لتلقي أسئلتكم أو مقترحاتكم .</p>
+                    
+                    
+
+                    <div id="alertPlaceholder"></div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="mb-3">
+                            <label for="userName" class="form-label fw-semibold text-muted">الاسم*</label>
+                            <input type="text" class="form-control rounded-pill px-3 py-2" id="userName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label fw-semibold text-muted">البريد الإلكتروني *</label>
+                            <input type="email" class="form-control rounded-pill px-3 py-2" id="userEmail" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="userMessage" class="form-label fw-semibold text-muted">رسالتك*</label>
+                            <textarea class="form-control rounded-4 p-3" id="userMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill py-2 fw-bold">إرسال </button>
+                    </form>
+                </div>
+            </div>
+                     
+            
+            <div class="col-md-5">
+                <div class="card border-0 shadow-sm p-4 rounded-4 bg-gradient-sidebar text-white h-100 d-flex flex-column justify-content-between">
+                    <div>
+                        <h4 class="fw-bold mb-4"> معلومات الاتصال </h4>
+                        <p>البريد العام: 
+                                         <a href="#">university-events@.com</a>
+                        </p>
+                        <p class="mb-3"><strong> بريد الدكتور باسل الخطيب:</strong><br><span class="fs-6">t_balkhatib@svuonline.org<br><br></span></p>
+                        <p class="mb-3"><strong>بريد أعضاء الفريق:</strong><br><span class="fs-6">zainab_352977@svuonline.org<br>
+                            masa_372787@svuonline.org<br>raghad_344348@svuonline.org<br>sondos_344731@svuonline.org<br>temaa_3735448@svuonline.org<br><br></span></p>
+                        
+                       
+                    <div>
+                        <hr class="border-white opacity-25 my-4"><br><br>
+                        <h5 class="fw-bold mb-3"> الحسابات الرسمية على السوشال ميديا</h5>
+                        <p class="small text-white-50">يمكنك متابعة المنصات المعتمدة لمعرفة مستجدات فعاليات الجامعة الافتراضية السورية.</p>
+                        <div class="d-flex gap-2 mt-2">
+                            <a href="#" target="_blank" class="btn btn-sm btn-light rounded-pill px-3 fw-bold">فيسبوك</a>
+                            <a href="#" target="_blank" class="btn btn-sm btn-light rounded-pill px-3 fw-bold">تلغرام</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-5 pb-4 mt-auto border-top border-secondary" style="background-color: #34495e; color: #ffffff;">
+        <div class="container text-center text-md-start">
+            <p class="small  text-center mb-0"> جميع الحقوق محفوظة  2026   | دليل فعاليات الجامعة الافتراضية السورية</p>
+        </div>
+    </footer>
+
+
+<!--سنستخدم مكتبة بوتستراب لتشغيل العناصر التفاعلية-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+        <a href="#" class="top-btn">العودة للأعلى</a>
+
+</body>
+</html>
